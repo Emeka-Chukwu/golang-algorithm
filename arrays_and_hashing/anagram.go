@@ -38,3 +38,7 @@ func (ArrayAlg) isAnagram(s string, t string) bool {
 	}
 	return true
 }
+
+////// you can you sort
+//// after sorting you van then compare the two...
+//// you might likely write your sorting function
