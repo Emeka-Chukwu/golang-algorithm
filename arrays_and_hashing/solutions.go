@@ -31,6 +31,7 @@ func (arr ArrayAlg) Run() {
 	fmt.Println("gotten result :", arr.twoSums([]int{2, 7, 11, 15}, 9), "expected result : [0 1]")
 	fmt.Println("gotten result :", arr.twoSums([]int{3, 2, 4}, 6), "expected result : [1 2]")
 	fmt.Println("gotten result :", arr.twoSums([]int{3, 3}, 6), "expected result : [0 1]")
+	fmt.Println("gotten result :", arr.twoSums([]int{2, 1, 5, 3}, 4), "expected result : [1 3]")
 	// fmt.Println("gotten result :", arr.isAnagram(s, t), "expected result : true")
 	fmt.Println("End TwoSums ============")
 	fmt.Println()
