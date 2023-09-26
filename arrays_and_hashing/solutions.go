@@ -35,4 +35,13 @@ func (arr ArrayAlg) Run() {
 	// fmt.Println("gotten result :", arr.isAnagram(s, t), "expected result : true")
 	fmt.Println("End TwoSums ============")
 	fmt.Println()
+
+	fmt.Println()
+	fmt.Println("Running  GroupAnagram  ============")
+	fmt.Println("gotten result :", arr.groupAnagrams([]string{"eat", "tea", "tan", "ate", "nat", "bat"}), "expected result : ", "[[bat],[nat,tan],[ate,eat,tea]]")
+	fmt.Println("gotten result :", arr.groupAnagrams([]string{""}), "expected result : [[]]")
+	fmt.Println("gotten result :", arr.groupAnagrams([]string{"a"}), "expected result : [[a]]")
+	// fmt.Println("gotten result :", arr.isAnagram(s, t), "expected result : true")
+	fmt.Println("End GroupAnagram ============")
+	fmt.Println()
 }
