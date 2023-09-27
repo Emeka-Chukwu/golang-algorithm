@@ -63,4 +63,19 @@ func (arr ArrayAlg) Run() {
 	// fmt.Println("gotten result :", arr.isAnagram(s, t), "expected result : true")
 	fmt.Println("End Top Frequency============")
 	fmt.Println()
+
+	fmt.Println()
+	fmt.Println("Running   Product of Array Except Self	============")
+
+	fmt.Println("gotten result :", arr.productExceptSelf([]int{1, 1, 1, 2, 2, 2, 3, 3, 4, 5, 6}), "expected result : ", "[1 2]")
+	fmt.Println("gotten result :", arr.productExceptSelf([]int{1, 2, 3, 4}), "expected result : ", "[24,12,8,6]")
+	fmt.Println("gotten result :", arr.productExceptSelf([]int{-1, 1, 0, -3, 3}), "expected result : ", "[0,0,9,0,0]")
+
+	fmt.Println("gotten result :", arr.productExceptSelfWithoutDivider([]int{1, 1, 1, 2, 2, 2, 3, 3, 4, 5, 6}), "expected result : ", "[1 2]")
+	fmt.Println("gotten result :", arr.productExceptSelfWithoutDivider([]int{1, 2, 3, 4}), "expected result : ", "[24,12,8,6]")
+	fmt.Println("gotten result :", arr.productExceptSelfWithoutDivider([]int{-1, 1, 0, -3, 3}), "expected result : ", "[0,0,9,0,0]")
+
+	// fmt.Println("gotten result :", arr.isAnagram(s, t), "expected result : true")
+	fmt.Println("End  Product of Array Except Self ============")
+	fmt.Println()
 }
