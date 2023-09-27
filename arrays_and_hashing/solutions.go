@@ -1,6 +1,8 @@
 package arraysandhashing
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type ArrayAlg struct {
 }
@@ -77,5 +79,33 @@ func (arr ArrayAlg) Run() {
 
 	// fmt.Println("gotten result :", arr.isAnagram(s, t), "expected result : true")
 	fmt.Println("End  Product of Array Except Self ============")
+	fmt.Println()
+
+	fmt.Println("Running  Sokudo	============")
+
+	fmt.Println("gotten result :", arr.isValidSudoku([][]byte{
+		{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
+		{'6', '.', '.', '1', '9', '5', '.', '.', '.'},
+		{'.', '9', '8', '.', '.', '.', '.', '6', '.'},
+		{'8', '.', '.', '.', '6', '.', '.', '.', '3'},
+		{'4', '.', '.', '8', '.', '3', '.', '.', '1'},
+		{'7', '.', '.', '.', '2', '.', '.', '.', '6'},
+		{'.', '6', '.', '.', '.', '.', '2', '8', '.'},
+		{'.', '.', '.', '4', '1', '9', '.', '.', '5'},
+		{'.', '.', '.', '.', '8', '.', '.', '7', '9'},
+	}), "expected result : ", "true")
+
+	fmt.Println("gotten result :", arr.isValidSudoku([][]byte{
+		{'8', '3', '.', '.', '7', '.', '.', '.', '.'},
+		{'6', '.', '.', '1', '9', '5', '.', '.', '.'},
+		{'.', '9', '8', '.', '.', '.', '.', '6', '.'},
+		{'8', '.', '.', '.', '6', '.', '.', '.', '3'},
+		{'4', '.', '.', '8', '.', '3', '.', '.', '1'},
+		{'7', '.', '.', '.', '2', '.', '.', '.', '6'},
+		{'.', '6', '.', '.', '.', '.', '2', '8', '.'},
+		{'.', '.', '.', '4', '1', '9', '.', '.', '5'},
+		{'.', '.', '.', '.', '8', '.', '.', '7', '9'}}), "expected result : ", "false")
+	// fmt.Println("gotten result :", arr.isAnagram(s, t), "expected result : true")
+	fmt.Println("End  Sokudo ============")
 	fmt.Println()
 }

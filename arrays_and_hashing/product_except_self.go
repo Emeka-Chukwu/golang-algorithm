@@ -71,7 +71,6 @@ func (ArrayAlg) productExceptSelfWithoutDivider(nums []int) []int {
 	for i := 0; i < len(nums); i++ {
 		result[i] = prefix
 		prefix = prefix * nums[i]
-
 	}
 	postfix := 1
 	for i := len(nums) - 1; i >= 0; i-- {
