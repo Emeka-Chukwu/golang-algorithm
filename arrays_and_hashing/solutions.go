@@ -41,7 +41,26 @@ func (arr ArrayAlg) Run() {
 	fmt.Println("gotten result :", arr.groupAnagrams([]string{"eat", "tea", "tan", "ate", "nat", "bat"}), "expected result : ", "[[bat],[nat,tan],[ate,eat,tea]]")
 	fmt.Println("gotten result :", arr.groupAnagrams([]string{""}), "expected result : [[]]")
 	fmt.Println("gotten result :", arr.groupAnagrams([]string{"a"}), "expected result : [[a]]")
+
+	fmt.Println("gotten result :", arr.groupAnagramsWithoutsort([]string{"eat", "tea", "tan", "ate", "nat", "bat"}), "expected result : ", "[[bat],[nat,tan],[ate,eat,tea]]")
+	fmt.Println("gotten result :", arr.groupAnagramsWithoutsort([]string{""}), "expected result : [[]]")
+	fmt.Println("gotten result :", arr.groupAnagramsWithoutsort([]string{"a"}), "expected result : [[a]]")
 	// fmt.Println("gotten result :", arr.isAnagram(s, t), "expected result : true")
 	fmt.Println("End GroupAnagram ============")
+	fmt.Println()
+
+	fmt.Println()
+	fmt.Println("Running  Top Frequency  ============")
+
+	fmt.Println("gotten result :", arr.topKFrequent([]int{1, 1, 1, 2, 2, 2, 3, 3, 4, 5, 6}, 2), "expected result : ", "[1 2]")
+	fmt.Println("gotten result :", arr.topKFrequent([]int{1, 1, 1, 2, 2, 3}, 2), "expected result : ", "[1 2]")
+	fmt.Println("gotten result :", arr.topKFrequent([]int{1}, 1), "expected result : ", "[1]")
+
+	fmt.Println("gotten result :", arr.topKFrequentWithoutSoriung([]int{1, 1, 1, 2, 2, 2, 3, 3, 4, 5, 6}, 2), "expected result : ", "[1 2]")
+	fmt.Println("gotten result :", arr.topKFrequentWithoutSoriung([]int{1, 1, 1, 2, 2, 3}, 2), "expected result : ", "[1 2]")
+	fmt.Println("gotten result :", arr.topKFrequentWithoutSoriung([]int{1}, 1), "expected result : ", "[1]")
+
+	// fmt.Println("gotten result :", arr.isAnagram(s, t), "expected result : true")
+	fmt.Println("End Top Frequency============")
 	fmt.Println()
 }

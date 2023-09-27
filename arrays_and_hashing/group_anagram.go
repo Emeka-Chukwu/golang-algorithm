@@ -21,6 +21,7 @@ import (
 // Input: strs = ["a"]
 // Output: [["a"]]
 
+// m x n log n
 func (ArrayAlg) groupAnagrams(strs []string) [][]string {
 	anagramMap := make(map[string][]string)
 	var results [][]string
@@ -38,4 +39,21 @@ func (ArrayAlg) groupAnagrams(strs []string) [][]string {
 	}
 	return results
 
+}
+
+func (ArrayAlg) groupAnagramsWithoutsort(strs []string) [][]string {
+	var hastTable = make(map[int][]string)
+	var result [][]string
+	for _, value := range strs {
+		var total int
+		for _, char := range value {
+			total += int(char - 'a')
+		}
+		hastTable[total] = append(hastTable[total], value)
+	}
+
+	for _, value := range hastTable {
+		result = append(result, value)
+	}
+	return result
 }
