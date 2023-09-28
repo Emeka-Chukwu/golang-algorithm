@@ -1,6 +1,7 @@
 package twopointers
 
 import (
+	"strings"
 	"unicode"
 )
 
@@ -54,4 +55,28 @@ func (AlTwoPointers) reverseStr(s string) string {
 	}
 
 	return reversedStr
+}
+
+func (alp AlTwoPointers) isPalindrome2(s string) bool {
+	left, right := 0, len(s)-1
+	for left < right {
+		for left < right && !alp.isAlphaNumeric(rune(s[left])) {
+			left++
+		}
+		for left < right && !alp.isAlphaNumeric(rune(s[right])) {
+			right--
+		}
+		if !strings.EqualFold(string(s[left]), string(s[right])) {
+			return false
+		}
+		left++
+		right--
+	}
+	return true
+}
+
+func (AlTwoPointers) isAlphaNumeric(char rune) bool {
+	return int(char) >= int('A') && int(char) <= int('Z') ||
+		int(char) >= int('a') && int(char) <= int('z') ||
+		int(char) >= int('0') && int(char) <= int('9')
 }
