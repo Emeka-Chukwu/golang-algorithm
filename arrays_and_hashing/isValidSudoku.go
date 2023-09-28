@@ -49,7 +49,7 @@ package arraysandhashing
 // board[i].length == 9
 // board[i][j] is a digit 1-9 or '.'.
 
-// this solution is not optimal
+// this solution doesn't account for the two other conditions
 func (ArrayAlg) isValidSudoku(board [][]byte) bool {
 
 	boardExpectedLength := 9
@@ -97,5 +97,70 @@ func (ArrayAlg) isValidSudoku(board [][]byte) bool {
 
 	}
 
+	return true
+}
+
+// this solution solves the problem with nxn = n^2
+func (ArrayAlg) isValidSudokuS(board [][]byte) bool {
+	boardExpectedLength := 9
+	if len(board) != boardExpectedLength {
+		return false
+	}
+	for _, val := range board {
+		if len(val) != boardExpectedLength {
+			return false
+		}
+	}
+	cStepper := 0
+	rStepper := 0
+	divider := 0
+	checker := make(map[byte]bool)
+
+	for cStepper != boardExpectedLength && rStepper != boardExpectedLength {
+		for i := rStepper; i < rStepper+3; i++ {
+			val := board[cStepper][i]
+			if exist := checker[val]; exist {
+				return false
+			}
+			if val != '.' {
+				checker[val] = true
+			}
+		}
+		cStepper++
+		divider++
+		if divider%3 == 0 {
+			checker = make(map[byte]bool)
+		}
+
+		if cStepper == boardExpectedLength && rStepper != boardExpectedLength-1 {
+			cStepper = 0
+			rStepper += 3
+		}
+
+	}
+
+	for _, value := range board {
+		checker := make(map[byte]bool)
+		for _, val := range value {
+			if exist := checker[val]; exist {
+				return false
+			}
+			if val != '.' {
+				checker[val] = true
+			}
+		}
+	}
+	for i := 0; i < boardExpectedLength; i++ {
+		checker := make(map[byte]bool)
+		for j := 0; j < boardExpectedLength; j++ {
+			if exist := checker[board[j][i]]; exist {
+				return false
+			}
+			if board[j][i] != '.' {
+				checker[board[j][i]] = true
+			}
+
+		}
+	}
 	return true
 }
