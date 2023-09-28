@@ -83,7 +83,7 @@ func (arr ArrayAlg) Run() {
 
 	fmt.Println("Running  Sokudo	============")
 
-	fmt.Println("gotten result :", arr.isValidSudokuS([][]byte{
+	fmt.Println("gotten result :", arr.isValidSudokuL([][]byte{
 		{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
 		{'6', '.', '.', '1', '9', '5', '.', '.', '.'},
 		{'.', '9', '8', '.', '.', '.', '.', '6', '.'},
@@ -95,7 +95,7 @@ func (arr ArrayAlg) Run() {
 		{'.', '.', '.', '.', '8', '.', '.', '7', '9'},
 	}), "expected result : ", "true")
 
-	fmt.Println("gotten result :", arr.isValidSudokuS([][]byte{
+	fmt.Println("gotten result :", arr.isValidSudokuL([][]byte{
 		{'8', '3', '.', '.', '7', '.', '.', '.', '.'},
 		{'6', '.', '.', '1', '9', '5', '.', '.', '.'},
 		{'.', '9', '8', '.', '.', '.', '.', '6', '.'},

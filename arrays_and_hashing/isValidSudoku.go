@@ -164,3 +164,20 @@ func (ArrayAlg) isValidSudokuS(board [][]byte) bool {
 	}
 	return true
 }
+
+func (ArrayAlg) isValidSudokuL(board [][]byte) bool {
+	var row, column, mat [9][9]bool
+	boardlenth := len(board)
+	for i := 0; i < boardlenth; i++ {
+		for j := 0; j < boardlenth; j++ {
+			if board[i][j] != '.' {
+				k := int(board[i][j]) - 49
+				if row[i][k] || column[j][k] || mat[i/3*3+j/3][k] {
+					return false
+				}
+				row[i][k], column[j][k], mat[i/3*3+j/3][k] = true, true, true
+			}
+		}
+	}
+	return true
+}
