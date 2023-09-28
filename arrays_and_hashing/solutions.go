@@ -108,4 +108,14 @@ func (arr ArrayAlg) Run() {
 	// fmt.Println("gotten result :", arr.isAnagram(s, t), "expected result : true")
 	fmt.Println("End  Sokudo ============")
 	fmt.Println()
+
+	fmt.Println()
+	fmt.Println("Running   longestConsecutive	============")
+
+	fmt.Println("gotten result :", arr.longestConsecutive([]int{100, 4, 200, 1, 3, 2}), "expected result : ", "4")
+	fmt.Println("gotten result :", arr.longestConsecutive([]int{0, 3, 7, 2, 5, 8, 4, 6, 0, 1}), "expected result : ", "9")
+	fmt.Println("gotten result :", arr.longestConsecutive([]int{0, 0}), "expected result : ", "1")
+	fmt.Println("gotten result :", arr.longestConsecutive([]int{1, 2, 0, 1}), "expected result : ", "3")
+	fmt.Println("End  longestConsecutive ============")
+	fmt.Println()
 }
