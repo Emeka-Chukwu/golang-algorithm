@@ -46,7 +46,27 @@ func (AlTwoPointers) maxArea(height []int) int {
 			if min*(i-index) > max {
 				max = min * (i - index)
 			}
+		}
+	}
+	return max
+}
 
+func (AlTwoPointers) maxAreaPointers(height []int) int {
+	max := math.MinInt
+	l, r := 0, len(height)-1
+	total := math.MinInt
+	for l < r {
+
+		if height[l] < height[r] {
+			total = height[l] * (r - l)
+			l++
+		} else {
+			total = height[r] * (r - l)
+			r--
+		}
+
+		if total > max {
+			max = total
 		}
 	}
 	return max
