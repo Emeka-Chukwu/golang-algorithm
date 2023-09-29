@@ -37,6 +37,7 @@ package twopointers
 // -1000 <= target <= 1000
 // The tests are generated such that there is exactly one solution.
 
+// this is good for unsorted arra
 func (AlTwoPointers) twoSum(numbers []int, target int) []int {
 	checkedSet := make(map[int]int)
 	for index, value := range numbers {
@@ -47,4 +48,21 @@ func (AlTwoPointers) twoSum(numbers []int, target int) []int {
 		checkedSet[value] = index
 	}
 	return []int{0, 0}
+}
+
+// for sorted arrays this will be better
+
+func (AlTwoPointers) twoSumSort(numbers []int, target int) []int {
+	l, r := 0, len(numbers)-1
+	for l < r {
+		curSum := numbers[l] + numbers[r]
+		if curSum > target {
+			r--
+		} else if curSum < target {
+			l++
+		} else {
+			return []int{l + 1, r + 1}
+		}
+	}
+	return []int{l + 1, r + 1}
 }
