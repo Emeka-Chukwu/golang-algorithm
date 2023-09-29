@@ -33,5 +33,12 @@ func (al AlTwoPointers) Run() {
 
 	fmt.Println("End  sum of three ============")
 
+	fmt.Println("Start  Maxrea============")
+
+	fmt.Println("gotten result :", al.maxArea([]int{1, 8, 6, 2, 5, 4, 8, 3, 7}), "     expected result : ", "49")
+	fmt.Println("gotten result :", al.maxArea([]int{1, 1}), "     expected result : ", "1")
+	// fmt.Println("gotten result :", al.maxArea([]int{0, 0, 0}), "       expected result : ", "[[0,0,0]]")
+
+	fmt.Println("End  MaxArea============")
 	fmt.Println()
 }
