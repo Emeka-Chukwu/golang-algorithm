@@ -44,4 +44,16 @@ func (al AlTwoPointers) Run() {
 
 	fmt.Println("End  MaxArea============")
 	fmt.Println()
+
+	fmt.Println("Start  Trap============")
+
+	fmt.Println("gotten result :", al.trap([]int{1, 8, 6, 2, 5, 4, 8, 3, 7}), "     expected result : ", "19")
+	fmt.Println("gotten result :", al.trap([]int{1, 1}), "     expected result : ", "0")
+
+	fmt.Println("gotten result :", al.trap([]int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}), "     expected result : ", "6")
+	fmt.Println("gotten result :", al.trap([]int{4, 2, 0, 3, 2, 5}), "     expected result : ", "9")
+	// fmt.Println("gotten result :", al.maxArea([]int{0, 0, 0}), "       expected result : ", "[[0,0,0]]")
+
+	fmt.Println("End  Trap============")
+	fmt.Println()
 }
