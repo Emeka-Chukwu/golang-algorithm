@@ -40,10 +40,7 @@ func (al AlTwoPointers) trap(height []int) int {
 }
 
 func (al AlTwoPointers) getMinOfMaxandLisLess(l, r int) bool {
-	if r < l {
-		return false
-	}
-	return true
+	return l < r
 }
 func (al AlTwoPointers) getMax(l, r int) int {
 	if r > l {
