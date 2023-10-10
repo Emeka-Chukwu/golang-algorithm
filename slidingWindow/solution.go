@@ -22,4 +22,16 @@ func (sl SlidingWindowAlg) Run() {
 	fmt.Println("End  MaxProfits============")
 	fmt.Println()
 
+	fmt.Println("Start   lengthOfLongestSubstring============")
+
+	fmt.Println("gotten result :", sl.lengthOfLongestSubstring("abcabcbb"), "     expected result : ", "3")
+	fmt.Println("gotten result :", sl.lengthOfLongestSubstring("bbbbb"), "     expected result : ", "1")
+	fmt.Println("gotten result :", sl.lengthOfLongestSubstring("pwwkew"), "     expected result : ", "3")
+	fmt.Println("gotten result :", sl.lengthOfLongestSubstring("aab"), "     expected result : ", "2")
+
+	// fmt.Println("gotten result :", al.maxArea([]int{0, 0, 0}), "       expected result : ", "[[0,0,0]]")
+
+	fmt.Println("End   lengthOfLongestSubstring============")
+
+	fmt.Println()
 }

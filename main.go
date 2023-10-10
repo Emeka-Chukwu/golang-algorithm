@@ -17,7 +17,7 @@ func main() {
 	arr.Run()
 	st.Run()
 	two.Run()
-	sliding.Run()
 	cir.Run()
+	sliding.Run()
 
 }
