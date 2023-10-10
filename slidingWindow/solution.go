@@ -34,4 +34,30 @@ func (sl SlidingWindowAlg) Run() {
 	fmt.Println("End   lengthOfLongestSubstring============")
 
 	fmt.Println()
+
+	fmt.Println("Start   characterReplacement============")
+
+	fmt.Println("gotten result :", sl.characterReplacement("ABAB", 2), "     expected result : ", "4")
+	fmt.Println("gotten result :", sl.characterReplacement("AABABBA", 1), "     expected result : ", "4")
+	// fmt.Println("gotten result :", sl.characterReplacement("AABABBA", 1), "     expected result : ", "4")
+
+	// fmt.Println("gotten result :", al.maxArea([]int{0, 0, 0}), "       expected result : ", "[[0,0,0]]")
+
+	fmt.Println("End   characterReplacement ============")
+
+	fmt.Println()
+
+	fmt.Println()
+
+	fmt.Println("Start   checkInclusive============")
+
+	fmt.Println("gotten result :", sl.checkInclusion("ab", "eidbaooo"), "     expected result : ", "true")
+	fmt.Println("gotten result :", sl.checkInclusion("ab", "eidboaoo"), "     expected result : ", "false")
+	// fmt.Println("gotten result :", sl.characterReplacement("AABABBA", 1), "     expected result : ", "4")
+
+	// fmt.Println("gotten result :", al.maxArea([]int{0, 0, 0}), "       expected result : ", "[[0,0,0]]")
+
+	fmt.Println("End  checkInclusive ============")
+
+	fmt.Println()
 }
